@@ -8,10 +8,10 @@ const HeaderNavigation = () => (
         <li className={styles.headerUl}>
           <Link to="/">Home</Link>
         </li>
-        <li>
+        <li className={styles.headerUl}>
           <Link to="/contact">Contact</Link>
         </li>
-        <li>
+        <li className={styles.headerUl}>
           <Link to="/products">Products</Link>
         </li>
       </ul>

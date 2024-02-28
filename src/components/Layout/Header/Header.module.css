@@ -1,12 +1,13 @@
 header {
   display: flex;
-  /* padding: var(--spacing-4) 3rem; */
-  background: black;
+  padding: var(--spacing-4) 3rem;
+  background: lightcoral;
   color: white;
 }
 
 .logo {
   height: 75px;
+  border-radius: 50%;
 }
 
 .contentWrap {

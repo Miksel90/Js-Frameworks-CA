@@ -1,17 +1,19 @@
-// import { HeaderNavigation } from "../../Navigation/Header";
+import HeaderNavigation from "/src/components/Navigation/Footer/index.jsx";
 import styles from "./Header.module.css";
-import logoColored from "../../../assets/logo/GadgetVaultLogo.webp";
+import logoColored from "../../../assets/logo/gadgetVaultLogo.webp";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+const Header = () => {
   return (
     <header>
       <div className={styles.contentWrap}>
         <Link to="/">
-          <img src={logoColored} alt="logo" className={styles.logo} />
+          <img src={logoColored} alt=" logo" className={styles.logo} />
         </Link>
-        {/* <HeaderNavigation /> */}
+        <HeaderNavigation />
       </div>
     </header>
   );
 };
+
+export default Header;

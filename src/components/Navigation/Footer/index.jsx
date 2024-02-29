@@ -3,8 +3,8 @@ import styles from "./FooterNavigation.module.css";
 
 const FooterNavigation = () => {
   return (
-    <nav>
-      <ul className={styles.footerNav}>
+    <nav className={styles.footerNav}>
+      <ul>
         <li>
           <Link to="/">Home</Link>
         </li>

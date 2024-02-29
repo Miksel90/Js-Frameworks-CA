@@ -1,14 +1,15 @@
-import HeaderNavigation from "/src/components/Navigation/Footer/index.jsx";
+import HeaderNavigation from "/src/components/Navigation/Header/index.jsx";
 import styles from "./Header.module.css";
-import logoColored from "../../../assets/logo/gadgetVaultLogo.webp";
+import logo from "../../../assets/logo/gadgetVaultLogo.webp";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.contentWrap}>
-        <Link to="/">
-          <img src={logoColored} alt=" logo" className={styles.logo} />
+        <Link to="/" className={styles.logoLink}>
+          <img src={logo} alt="Logo" className={styles.logo} />
+          <span className={styles.logoText}>GadgetVault</span>
         </Link>
         <HeaderNavigation />
       </div>

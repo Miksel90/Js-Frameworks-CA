@@ -4,9 +4,26 @@
   width: 100%;
 }
 
-.headerUl {
+.headerList {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
+}
+
+.searchBar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-grow: 1;
+}
+
+@media (min-width: 992px) {
+  .headerNav,
+  .headerList {
+    width: auto;
+  }
+  .headerList {
+    gap: 1rem;
+  }
 }

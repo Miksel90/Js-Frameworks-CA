@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => (
-  <div>
+  <div className="page">
     <Header />
     <Outlet /> {/* This will render the component for the matching route */}
     <Footer />

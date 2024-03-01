@@ -1,23 +1,26 @@
 import "./App.css";
-
-// import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout/index";
-// import ContactPage from "./pages/Contact";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/index.jsx";
+import Home from "./pages/Home/index.jsx";
+import Contact from "./pages/Contact/index.jsx";
+import NotFound from "./pages/Error/index.jsx";
 // import ProductPage from "./pages/Product";
 // import CheckoutPage from "./pages/Checkout";
-// import CheckoutSuccessPage from "./pages/CheckoutSuccess";
 
-function App() {
+const App = () => {
   return (
-    <Layout>
-      {/* <Routes>
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/products/:productId" element={<ProductPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/checkout-success" element={<CheckoutSuccessPage />} />
-      </Routes> */}
-    </Layout>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          {/* <Route path="product/:id" element={<Product id />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<Checkout />} /> */}
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </>
   );
-}
-
+};
 export default App;

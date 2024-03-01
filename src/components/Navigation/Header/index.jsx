@@ -29,7 +29,7 @@ const HeaderNavigation = () => {
           </li>
           <li className={styles.headerItem}>
             <CartIcon itemCount={itemCount} />
-            <Link to="/checkout">Products</Link>
+            <Link to="/checkout"></Link>
           </li>
         </ul>
       </nav>

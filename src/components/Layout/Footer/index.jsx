@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import logo from "../../../assets/logo/gadgetVaultLogo.webp";
+// import logo from "../../../assets/logo/gadgetVaultLogo.webp";
 import FooterNavigation from "/src/components/Navigation/Footer/index.jsx";
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
     <footer>
       <div>
         <div className={styles.footerText}>
-          <img src={logo} alt="logo" />
+          {/* <img src={logo} alt="logo" /> */}
           <p>
             Welcome to GadgetVault, the ultimate online shopping destination for
             fashion-conscious individuals! We are a one-stop-shop for all your
@@ -20,7 +20,6 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <h3>Quick links</h3>
           <FooterNavigation />
         </div>
       </div>

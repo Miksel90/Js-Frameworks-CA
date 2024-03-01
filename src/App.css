@@ -71,20 +71,3 @@ h4,
 h5 {
   font-size: 1.3rem;
 }
-
-
-/* .error {
-  width: 80%;
-  height: 100px;
-  background-color: var(--error-lt);
-  border-radius: 5px;
-  padding: var(--spacing-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: var(--spacing-4);
-  color: var(--error);
-  border: 1px solid var(--error);
-}
-

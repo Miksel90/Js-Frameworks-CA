@@ -2,7 +2,7 @@
   font-size: 16px;
   --primary: hsl(219, 54%, 53%);
   --secondary: hsl(240, 12%, 27%);
-  --background: hsl(0, 0%, 100%);
+  --background: hsl(199, 27%, 39%);
   --success: hsl(160 95% 25%);
   --error: hsl(0, 100%, 40%);
   --spacing-1: 0.25rem;
@@ -41,7 +41,7 @@ li {
 
 body {
   min-height: 100vh;
-  /* background-color: var(--background); */
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
 }

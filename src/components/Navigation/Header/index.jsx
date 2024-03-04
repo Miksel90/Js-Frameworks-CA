@@ -8,7 +8,6 @@ const itemCount = 5;
 const HeaderNavigation = () => {
   const handleSearch = (query) => {
     console.log("Search submitted for:", query);
-    // Here you can implement redirection to a search results page or any other logic
   };
 
   return (

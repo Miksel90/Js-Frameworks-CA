@@ -6,9 +6,7 @@ import CartIcon from "../../Cart";
 const itemCount = 5;
 
 const HeaderNavigation = () => {
-  const handleSearch = (query) => {
-    console.log("Search submitted for:", query);
-  };
+  const handleSearch = () => {};
 
   return (
     <header>

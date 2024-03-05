@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./Product.module.css";
 import { FaStar } from "react-icons/fa";
 
-function Product() {
+function Product({ onTitleChange }) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -19,6 +19,7 @@ function Product() {
         const json = await response.json();
 
         setData(json.data);
+        onTitleChange(json.data.title);
       } catch (error) {
         console.log(error);
         setIsError(true);
@@ -28,7 +29,7 @@ function Product() {
     }
 
     getData(`https://v2.api.noroff.dev/online-shop/${id}`);
-  }, [id]);
+  }, [id, onTitleChange]);
 
   if (isLoading || !data) {
     return <div>Loading...</div>;

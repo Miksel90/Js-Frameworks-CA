@@ -4,7 +4,7 @@ import styles from "./FooterNavigation.module.css";
 const FooterNavigation = () => {
   return (
     <nav className={styles.footerNav}>
-      <ul>
+      <ul className={styles.footerList}>
         <li>
           <Link to="/">Home</Link>
         </li>

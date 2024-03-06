@@ -3,21 +3,40 @@ footer {
   display: flex;
   padding: var(--spacing-8) 5rem;
   justify-content: space-around;
-  /* background-color: pink; */
+  flex-direction: row;
+  border-top: 2px solid black;
+  margin-top: var(--spacing-8);
+}
+
+.footerTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
 }
 
 .logo {
-  height: 75px;
-  width: 100px;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 10px;
 }
 
 .footerText,
 .navigationContainer {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-4);
+  flex-direction: row;
+  gap: var(--spacing-6);
 }
 
 .footerText {
   max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .footerText {
+    text-align: center;
+  }
+  .logo {
+    height: 8rem;
+    width: 8rem;
+  }
 }

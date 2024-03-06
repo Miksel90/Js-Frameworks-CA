@@ -1,5 +1,20 @@
 .footerNav {
+  font-size: 20px;
+  border-top: 2px solid black;
+  margin-top: var(--spacing-8);
+}
+
+.footerList {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--spacing-2);
+  width: 100%;
+  margin-top: var(--spacing-8);
+}
+
+@media screen and (max-width: 400px) {
+  .footerList {
+    flex-direction: column;
+  }
 }

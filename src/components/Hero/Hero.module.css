@@ -2,6 +2,7 @@
   position: relative;
   background-image: url("../../assets/images/heroImg.webp");
   width: 100%;
-  height: 820px;
+  height: 680px;
   background-size: cover;
+  background-position: center;
 }

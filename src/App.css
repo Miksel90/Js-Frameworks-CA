@@ -1,7 +1,7 @@
 :root {
   font-size: 16px;
   --primary: hsl(219, 54%, 53%);
-  --secondary: hsl(240, 4%, 11%);
+  --secondary: hsl(240, 26%, 55%);
   --background: hsl(199, 27%, 39%);
   --success: hsl(160 95% 25%);
   --error: hsl(0, 100%, 40%);

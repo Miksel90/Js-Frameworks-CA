@@ -3,7 +3,7 @@ import styles from "./HeaderNavigation.module.css";
 import SearchBar from "../../../Search";
 import CartIcon from "../../Cart";
 
-const itemCount = 5;
+const itemCount = 3;
 
 const HeaderNavigation = () => {
   const handleSearch = () => {};

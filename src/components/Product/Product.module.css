@@ -63,9 +63,7 @@
 }
 
 .ratingNumber {
-  color: black;
-  font-weight: bold;
-  margin: 8px;
+  display: none;
 }
 
 .ProductFooter {

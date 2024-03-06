@@ -18,7 +18,8 @@
   font-style: italic;
 }
 
-.searchInput:focus {
+.searchInput:focus,
+.searchInput:hover {
   outline: none;
 }
 
@@ -46,5 +47,6 @@
 .suggestionItem {
   padding: 10px;
   border-bottom: 1px solid #eee;
+  color: black;
   cursor: pointer;
 }

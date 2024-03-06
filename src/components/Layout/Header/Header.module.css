@@ -1,7 +1,7 @@
 .header {
   display: flex;
   padding: var(--spacing-4) 3rem;
-  background: lightblue;
+  background: var(--secondary);
   position: sticky;
   z-index: 99;
   top: 0;
@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 .logo {

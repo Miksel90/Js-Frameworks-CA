@@ -10,14 +10,14 @@ const Footer = () => {
           <img src={logo} alt="Logo" className={styles.logo} />
           <div className={styles.footerTextContainer}>
             <p>
-              Welcome to GadgetVault, the ultimate online shopping destination
-              for fashion-conscious individuals! We are a one-stop-shop for all
-              your fashion needs, offering a wide range of products that are
-              trendy, stylish, and affordable.
+              Welcome to GadgetVault, the ultimate destination for
+              gadget-collecting individuals! We are a one-stop-shop for all your
+              nerdy needs, offering a wide range of gadgets that are functional,
+              stylish, and affordable.
             </p>
             <p>
-              Thank you for choosing GadgetVault, and we hope you enjoy your
-              shopping experience with us!
+              Thank you for choosing GadgetVault, and we hope you enjoy filling
+              up your vault!
             </p>
           </div>
         </div>

@@ -1,10 +1,18 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
-import styles from "./Product.module.css";
 import { FaStar } from "react-icons/fa";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
+import useStore from "../../store/CartStore/cartStore";
+import styles from "./Product.module.css";
 
 function Product({ onTitleChange }) {
+  const addToCart = useStore((state) => state.addToCart);
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    console.log("Added to cart");
+  };
+
   let { id } = useParams();
   const { products, isLoading, error } = useFetchProducts();
 
@@ -73,7 +81,9 @@ function Product({ onTitleChange }) {
           )}
         </div>
         <div className={styles.ProductFooter}>
-          <button className="cta large">Add to cart</button>
+          <button className="cta large" onClick={handleAddToCart}>
+            Add to cart
+          </button>
           <div className={styles.rating}>
             {typeof stars === "string" ? (
               <span className={styles.noRating}>{stars}</span>

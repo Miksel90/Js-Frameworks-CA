@@ -3,8 +3,6 @@ import styles from "./HeaderNavigation.module.css";
 import SearchBar from "../../../Search";
 import CartIcon from "../../Cart";
 
-const itemCount = 3;
-
 const HeaderNavigation = () => {
   const handleSearch = () => {};
 
@@ -25,8 +23,8 @@ const HeaderNavigation = () => {
             <Link to="/products">Products</Link>
           </li>
           <li className={styles.headerItem}>
-            <CartIcon itemCount={itemCount} />
-            <Link to="/checkout"></Link>
+            <CartIcon />
+            <Link to="/cart"></Link>
           </li>
         </ul>
       </nav>

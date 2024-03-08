@@ -1,100 +1,85 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./Product.module.css";
 import { FaStar } from "react-icons/fa";
+import { useFetchProducts } from "../../hooks/useFetchProducts";
 
 function Product({ onTitleChange }) {
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
   let { id } = useParams();
+  const { products, isLoading, error } = useFetchProducts();
 
   useEffect(() => {
-    async function getData(url) {
-      try {
-        setIsLoading(true);
-        setIsError(false);
-
-        const response = await fetch(url);
-        const json = await response.json();
-
-        setData(json.data);
-        onTitleChange(json.data.title);
-      } catch (error) {
-        console.log(error);
-        setIsError(true);
-      } finally {
-        setIsLoading(false);
+    if (products.length > 0) {
+      const product = products.find((p) => p.id.toString() === id);
+      if (product) {
+        onTitleChange(product.title);
       }
     }
+  }, [products, id, onTitleChange]);
 
-    getData(`https://v2.api.noroff.dev/online-shop/${id}`);
-  }, [id, onTitleChange]);
-
-  if (isLoading || !data) {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (isError) {
-    return <div>Error</div>;
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  const product = products.find((p) => p.id.toString() === id);
+
+  if (!product) {
+    return <div>Product not found</div>;
   }
 
   const stars =
-    data.rating > 0
-      ? Array.from({ length: data.rating }, (_, index) => (
+    product.rating > 0
+      ? Array.from({ length: product.rating }, (_, index) => (
           <FaStar key={index} className={styles.starIcon} />
         ))
       : "This item has not been rated yet.";
 
-  const priceDifference = data.discountedPrice
-    ? ((data.price - data.discountedPrice) / data.price) * 100
+  const priceDifference = product.discountedPrice
+    ? ((product.price - product.discountedPrice) / product.price) * 100
     : 0;
 
   return (
     <div className={styles.productContainer}>
-      <h2 className={styles.title}>{data.title}</h2>
-      {data.image && data.image.url && (
+      <h2 className={styles.title}>{product.title}</h2>
+      {product.image && product.image.url && (
         <img
-          src={data.image.url}
-          alt={data.title || "Product image"}
+          src={product.image.url}
+          alt={product.title || "Product image"}
           className={styles.productImage}
         />
       )}
       <div className={styles.productDetails}>
-        <div className={styles.description}>{data.description}</div>
+        <div className={styles.description}>{product.description}</div>
         <div className={styles.priceSection}>
-          {data.discountedPrice && data.discountedPrice !== data.price ? (
+          {product.discountedPrice &&
+          product.discountedPrice !== product.price ? (
             <>
               <p className={styles.discountedPrice}>
-                New Price: ${data.discountedPrice}
+                New Price: ${product.discountedPrice}
               </p>
               <p className={styles.originalPrice}>
-                Original Price: ${data.price}
+                Original Price: ${product.price}
               </p>
               <p className={styles.discountPercentage}>
                 Save: {priceDifference.toFixed(2)}%
               </p>
             </>
           ) : (
-            <p className={styles.discountedPrice}>Price: ${data.price}</p>
+            <p className={styles.discountedPrice}>Price: ${product.price}</p>
           )}
         </div>
         <div className={styles.ProductFooter}>
-          <button
-            className="cta large"
-            // onClick={() => {
-            //   setShowLabel(true);
-            //   addProduct(data);
-            // }}
-          >
-            Add to cart
-          </button>
+          <button className="cta large">Add to cart</button>
           <div className={styles.rating}>
             {typeof stars === "string" ? (
               <span className={styles.noRating}>{stars}</span>
             ) : (
               <>
-                <span className={styles.ratingNumber}>{data.rating}</span>
+                <span className={styles.ratingNumber}>{product.rating}</span>
                 {stars}
               </>
             )}
@@ -103,8 +88,8 @@ function Product({ onTitleChange }) {
         <div className={styles.divider}></div>
         <div className={styles.ratingContainer}>
           <h3 className={styles.reviewTitle}>Reviews</h3>
-          {data.reviews && data.reviews.length > 0 ? (
-            data.reviews.map((review) => (
+          {product.reviews && product.reviews.length > 0 ? (
+            product.reviews.map((review) => (
               <div key={review.id} className={styles.reviews}>
                 <div className={styles.reviewUser}>{review.username}</div>
                 <div className={styles.reviewDescription}>

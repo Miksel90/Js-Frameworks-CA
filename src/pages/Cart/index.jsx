@@ -1,10 +1,9 @@
-import useStore from "../../store/CartStore/cartStore";
+import useStore from "../../store/CartStore";
 
 function CartPage() {
   const cart = useStore((state) => state.cart);
   console.log(cart);
 
-  // Calculate total
   const total = cart.reduce(
     (acc, product) => acc + (product.discountedPrice || product.price),
     0

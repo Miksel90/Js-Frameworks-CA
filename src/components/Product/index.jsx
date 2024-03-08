@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
-import useStore from "../../store/CartStore/cartStore";
+import useStore from "../../store/CartStore";
 import styles from "./Product.module.css";
 
 function Product({ onTitleChange }) {

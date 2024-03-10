@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import logo from "../../../assets/logo/gadgetVaultLogo.webp";
+import logo from "../..//logo/gadgetVaultLogo.webp";
 import FooterNavigation from "/src/components/Navigation/Footer/index.jsx";
 
 const Footer = () => {

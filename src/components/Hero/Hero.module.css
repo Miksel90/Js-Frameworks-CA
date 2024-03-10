@@ -1,6 +1,6 @@
 .heroImg {
   position: relative;
-  background-image: url("../../assets/images/heroImg.webp");
+  background-image: url("../../components/images/heroImg.webp");
   width: 100%;
   height: 680px;
   background-size: cover;

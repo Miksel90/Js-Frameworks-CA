@@ -1,5 +1,5 @@
 import styles from "./Checkout.module.css";
-import checkoutImage from "../../assets/images/checkoutGoodbye.webp";
+import checkoutImage from "../../components//images/checkoutGoodbye.webp";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 

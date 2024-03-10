@@ -5,7 +5,7 @@ import { useFetchProducts } from "../../hooks/useFetchProducts";
 import useStore from "../../store/CartStore";
 import styles from "./Product.module.css";
 
-function Product({ onTitleChange }) {
+function Product() {
   const addToCart = useStore((state) => state.addToCart);
 
   const handleAddToCart = () => {
@@ -20,10 +20,10 @@ function Product({ onTitleChange }) {
     if (products.length > 0) {
       const product = products.find((p) => p.id.toString() === id);
       if (product) {
-        onTitleChange(product.title);
+        product.title;
       }
     }
-  }, [products, id, onTitleChange]);
+  }, [products, id]);
 
   if (isLoading) {
     return <div>Loading...</div>;

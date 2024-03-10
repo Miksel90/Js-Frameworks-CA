@@ -1,5 +1,6 @@
 import useStore from "../../store/CartStore";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 
 function CartPage() {
@@ -26,6 +27,10 @@ function CartPage() {
       acc + product.quantity * (product.discountedPrice || product.price),
     0
   );
+
+  const handleCheckout = () => {
+    clearCart();
+  };
 
   return (
     <main className={styles.cartPage}>
@@ -68,7 +73,11 @@ function CartPage() {
         </div>
       </section>
       <div className={styles.cartFooter}>
-        <button className="cta large">Checkout</button>
+        {cart.length > 0 && (
+          <Link to="/checkout" className="cta large" onClick={handleCheckout}>
+            Checkout
+          </Link>
+        )}
       </div>
     </main>
   );

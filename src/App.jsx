@@ -6,6 +6,7 @@ import Contact from "./pages/Contact/index.jsx";
 import NotFound from "./pages/Error/index.jsx";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/Cart";
+import CheckoutPage from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="product/:id" element={<ProductPage />} />
           <Route path="cart" element={<CartPage />} />
-          {/* <Route path="checkout" element={<CheckoutPage />} /> */}
+          <Route path="checkout" element={<CheckoutPage />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

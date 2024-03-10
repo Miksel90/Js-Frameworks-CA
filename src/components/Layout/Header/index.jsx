@@ -1,6 +1,6 @@
 import HeaderNavigation from "/src/components/Navigation/Header/index.jsx";
 import styles from "./Header.module.css";
-import logo from "../../../assets/logo/gadgetVaultLogo.webp";
+import logo from "src/components/assets/logo/gadgetVaultLogo.webp";
 import { Link } from "react-router-dom";
 
 const Header = () => {

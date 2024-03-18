@@ -39,7 +39,7 @@ function ContactPage() {
         <title>Contact | GadgetVault</title>
       </Helmet>
       <section className={styles.ContactInfo}>
-        <h1>Contact</h1>
+        <h1 className={styles.header}>Contact</h1>
         <div className={styles.divider}></div>
         {!isSubmitted ? (
           <form

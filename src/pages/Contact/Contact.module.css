@@ -21,12 +21,14 @@
   align-items: center;
   padding: var(--spacing-8);
   gap: var(--spacing-4);
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto;
 }
 
-.contactInfo h1 {
-  font-size: 1.8rem;
+.header {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
 }
 
 .contactHeader {
@@ -40,6 +42,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  max-width: 500px;
   gap: var(--spacing-2);
   margin: 0 auto;
 }

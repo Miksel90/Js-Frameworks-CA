@@ -10,7 +10,7 @@ function Product() {
 
   const handleAddToCart = () => {
     addToCart(product);
-    console.log("Added to cart");
+    // console.log("Added to cart");
   };
 
   let { id } = useParams();
@@ -20,7 +20,7 @@ function Product() {
     if (products.length > 0) {
       const product = products.find((p) => p.id.toString() === id);
       if (product) {
-        product.title;
+        document.title = product.title + " | GadgetVault";
       }
     }
   }, [products, id]);

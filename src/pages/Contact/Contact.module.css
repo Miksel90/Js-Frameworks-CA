@@ -25,11 +25,11 @@
   margin: 0 auto;
 }
 
-.header {
+/* .header {
   display: flex;
   margin: 10px;
   justify-content: center;
-}
+} */
 
 .contactHeader {
   display: flex;

@@ -4,7 +4,7 @@
   display: flex;
   background-color: #eee;
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 .searchButton {
@@ -12,6 +12,7 @@
   height: 100%;
   color: black;
   border-color: var(--primary);
+  font-size: larger;
 }
 
 .searchInput {

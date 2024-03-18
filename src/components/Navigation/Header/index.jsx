@@ -19,9 +19,9 @@ const HeaderNavigation = () => {
           <li className={styles.headerItem}>
             <Link to="/contact">Contact</Link>
           </li>
-          <li className={styles.headerItem}>
+          {/* <li className={styles.headerItem}>
             <Link to="/products">Products</Link>
-          </li>
+          </li> */}
           <li className={styles.headerItem}>
             <CartIcon />
             <Link to="/cart"></Link>

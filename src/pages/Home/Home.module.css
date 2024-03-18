@@ -11,6 +11,10 @@
   text-shadow: 5px 5px 5px #000000;
 }
 
+.heroContent h1 {
+  text-align: center;
+}
+
 .productHeader {
   font-size: 3rem;
   color: white;
@@ -37,7 +41,7 @@
   .productContainer {
     grid-template-columns: 1fr;
   }
-  .heroContent {
-    font-size: 20px;
+  .heroContent h1 {
+    font-size: 40px;
   }
 }

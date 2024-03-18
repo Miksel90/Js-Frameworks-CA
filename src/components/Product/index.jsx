@@ -26,7 +26,7 @@ function Product() {
   }, [products, id]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className={styles.Loading}>Loading...</div>;
   }
 
   if (error) {

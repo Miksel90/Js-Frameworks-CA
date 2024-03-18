@@ -37,7 +37,7 @@ function CartPage() {
       <Helmet>
         <title>Cart | GadgetStore</title>
       </Helmet>
-      <h2 className={styles.cartHeader}>Cart</h2>
+      <h1 className={styles.cartHeader}>Cart</h1>
       <section className={styles.productSection}>
         <ul>
           {Object.values(aggregatedProducts).map((product) => (
@@ -55,26 +55,30 @@ function CartPage() {
                   {product.title} ({product.quantity})
                 </h4>
                 <p>${product.discountedPrice || product.price}</p>
-                <button
-                  className="cta"
-                  onClick={() => removeFromCart(product.id)}
-                >
-                  Remove
-                </button>
               </div>
+              <button
+                className="cta removeButton"
+                onClick={() => removeFromCart(product.id)}
+              >
+                Remove
+              </button>
             </li>
           ))}
         </ul>
         <div className={styles.totalPriceContainer}>
-          <h3>Total: ${total.toFixed(2)}</h3>
-          <button className="cta" onClick={clearCart}>
-            Clear Cart
-          </button>
+          <p>Total: ${total.toFixed(2)}</p>
         </div>
+        <button className="cta" onClick={clearCart}>
+          Clear Cart
+        </button>
       </section>
       <div className={styles.cartFooter}>
         {cart.length > 0 && (
-          <Link to="/checkout" className="cta large" onClick={handleCheckout}>
+          <Link
+            to="/checkout"
+            className="  cta large "
+            onClick={handleCheckout}
+          >
             Checkout
           </Link>
         )}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Search.module.css";
 
 const SearchBar = () => {
-  const { products, isLoading, error } = useFetchProducts();
+  const { products } = useFetchProducts();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
 
@@ -30,9 +30,6 @@ const SearchBar = () => {
     setSearchTerm("");
     setFilteredResults([]);
   };
-
-  if (isLoading) return <p>Loading products...</p>;
-  if (error) return <p>Error fetching products: {error}</p>;
 
   return (
     <form role="search" className={styles.searchForm} onSubmit={handleSubmit}>

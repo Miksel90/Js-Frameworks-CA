@@ -9,8 +9,9 @@
 .headerList {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: var(--spacing-2);
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8rem;
   width: 100%;
 }
 
@@ -21,7 +22,7 @@
   flex-grow: 1;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .headerNav,
   .headerList {
     width: auto;
@@ -33,6 +34,6 @@
 
 @media screen and (max-width: 780px) {
   .headerList {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }

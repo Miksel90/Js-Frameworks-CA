@@ -5,7 +5,6 @@
 }
 
 .cartHeader {
-  font-size: 30px;
   margin: 10px;
 }
 
@@ -22,7 +21,6 @@
   justify-content: center;
   gap: var(--spacing-4);
   margin-bottom: var(--spacing-4);
-  /* background-color: #fff; */
 }
 
 .productItemImage {
@@ -30,8 +28,8 @@
 }
 
 .productItemImage img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -42,12 +40,15 @@
   justify-content: space-evenly;
   width: 200px;
   height: 150px;
+  font-size: 30px;
 }
 
 .totalPriceContainer {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: var(--spacing-8);
+  font-size: 40px;
 }
 
 .cartFooter {

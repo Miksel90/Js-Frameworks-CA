@@ -81,3 +81,9 @@
     margin-right: 40px;
   }
 }
+
+@media screen and (max-width: 429px) {
+  .headerList {
+    left: -200px;
+  }
+}

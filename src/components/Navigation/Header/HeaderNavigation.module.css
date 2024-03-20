@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   width: 100%;
   color: #fff;
+  position: relative;
 }
 
 .headerList {
@@ -46,6 +47,7 @@
 @media screen and (max-width: 780px) {
   .headerNav {
     justify-content: space-around;
+    gap: var(--spacing-8);
   }
 
   .hamburger {
@@ -58,9 +60,11 @@
   .headerList {
     position: absolute;
     top: 100%;
-    left: 0;
-    flex-direction: column;
+    left: -100px;
+    flex-direction: column-reverse;
     width: 100%;
+    min-width: 280px;
+    padding: 1rem;
     display: none;
     background: var(--secondary);
   }
@@ -74,5 +78,6 @@
     width: 100%;
     text-align: center;
     justify-content: center;
+    margin-right: 40px;
   }
 }

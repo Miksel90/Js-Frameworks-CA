@@ -18,6 +18,11 @@ export const Card = ({
   return (
     <Link to={`/product/${id}`}>
       <div key={id} className={styles.product}>
+        {discountedPrice && (
+          <div className={styles.discountBanner}>
+            Save {discountPercentage}%
+          </div>
+        )}
         <img
           src={image.url}
           alt={image.alt || title}
@@ -46,9 +51,6 @@ export const Card = ({
             <>
               <p className={styles.discountedPrice}>
                 New Price: ${discountedPrice}
-              </p>
-              <p className={styles.discountPercentage}>
-                Save: {discountPercentage}%
               </p>
             </>
           )}

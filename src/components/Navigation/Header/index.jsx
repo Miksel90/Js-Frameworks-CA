@@ -33,11 +33,10 @@ const HeaderNavigation = () => {
           <li className={styles.headerItem}>
             <Link to="/contact">Contact</Link>
           </li>
-          <li className={styles.headerItem}>
-            <CartIcon />
-            <Link to="/cart"></Link>
-          </li>
         </ul>
+        <div className={styles.cartIcon}>
+          <CartIcon />
+        </div>
       </nav>
     </header>
   );

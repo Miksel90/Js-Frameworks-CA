@@ -3,6 +3,8 @@
   font-size: 30px;
   cursor: pointer;
   color: #fff;
+  margin-left: 50px;
+  margin-top: 10px;
 }
 
 .cartIcon:hover {
@@ -22,40 +24,4 @@
   justify-content: center;
   align-items: center;
   font-size: 12px;
-}
-
-@media screen and (min-width: 710px) and (max-width: 780px) {
-  .itemCount {
-    right: 325px;
-  }
-}
-
-@media screen and (min-width: 590px) and (max-width: 710px) {
-  .itemCount {
-    right: 280px;
-  }
-}
-
-@media screen and (min-width: 500px) and (max-width: 590px) {
-  .itemCount {
-    right: 250px;
-  }
-}
-
-@media screen and (min-width: 450px) and (max-width: 500px) {
-  .itemCount {
-    right: 220px;
-  }
-}
-
-@media screen and (min-width: 400px) and (max-width: 450px) {
-  .itemCount {
-    right: 185px;
-  }
-}
-
-@media screen and (min-width: 300px) and (max-width: 400px) {
-  .itemCount {
-    right: 140px;
-  }
 }

@@ -25,3 +25,9 @@
   align-items: center;
   font-size: 12px;
 }
+
+@media screen and (max-width: 400px) {
+  .cartIcon {
+    margin-left: 0px;
+  }
+}

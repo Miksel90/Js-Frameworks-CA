@@ -33,13 +33,13 @@ function CartPage() {
   };
 
   return (
-    <main className={styles.cartPage}>
+    <main>
       <Helmet>
         <title>Cart | GadgetStore</title>
       </Helmet>
       <h1 className={styles.cartHeader}>Cart</h1>
       <section className={styles.productSection}>
-        <ul>
+        <ul className={styles.productList}>
           {Object.values(aggregatedProducts).map((product) => (
             <li key={product.id} className={styles.productItem}>
               <div className={styles.productItemImage}>
@@ -66,11 +66,11 @@ function CartPage() {
           ))}
         </ul>
         <div className={styles.totalPriceContainer}>
-          <p>Total: ${total.toFixed(2)}</p>
+          <p className={styles.totalPrice}>Total: ${total.toFixed(2)}</p>
+          <button className="cta" onClick={clearCart}>
+            Clear Cart
+          </button>
         </div>
-        <button className="cta" onClick={clearCart}>
-          Clear Cart
-        </button>
       </section>
       <div className={styles.cartFooter}>
         {cart.length > 0 && (

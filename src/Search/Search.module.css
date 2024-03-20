@@ -1,8 +1,7 @@
 .searchForm {
-  border-radius: 10px;
+  position: relative;
   height: 50px;
   display: flex;
-  background-color: #eee;
   width: 100%;
   max-width: 300px;
 }
@@ -19,6 +18,7 @@
   padding-left: 10px;
   font-style: italic;
   border: none;
+  border-radius: 5px 0 0 5px;
 }
 
 .searchInput:focus,
@@ -56,4 +56,16 @@
 
 .suggestionItem:hover {
   background-color: cadetblue;
+}
+
+@media (max-width: 756px) {
+  .searchForm {
+    max-width: 200px;
+    margin-top: 5px;
+  }
+  .searchSuggestion {
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -41,3 +41,15 @@
     align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .logoText {
+    font-size: 30px;
+  }
+  .contentWrap {
+    flex-direction: row;
+  }
+}

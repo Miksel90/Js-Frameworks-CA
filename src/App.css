@@ -45,11 +45,13 @@ body {
 body.light {
   --background: var(--background-light);
   --text-color: var(--text-light);
+  transition: background-color 0.3s;
 }
 
 body.dark {
   --background: var(--background-dark);
   --text-color: var(--text-dark);
+  transition: background-color 0.3s;
 }
 
 html {

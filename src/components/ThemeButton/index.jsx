@@ -10,10 +10,15 @@ const ThemeButton = () => {
   const beforeClasses = `${styles.before} ${
     theme === "dark" ? styles.activeBefore : ""
   }`;
+  const ariaLabel = `Switch to ${theme === "dark" ? "light" : "dark"} mode`;
 
   return (
-    <button className={buttonClasses} onClick={toggleTheme}>
-      <span className={beforeClasses}> </span>
+    <button
+      className={buttonClasses}
+      onClick={toggleTheme}
+      aria-label={ariaLabel}
+    >
+      <span className={beforeClasses}></span>
     </button>
   );
 };

@@ -26,6 +26,7 @@ const Footer = () => {
           <FooterNavigation />
         </div>
         <div className={styles.themeContainer}>
+          <p> Toggle Theme</p>
           <ThemeButton />
         </div>
       </div>

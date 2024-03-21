@@ -11,14 +11,14 @@ export const Card = ({
   image,
   tags,
 }) => {
-  const discountPercentage = discountedPrice
+  const hasDiscount = discountedPrice && discountedPrice < price;
+  const discountPercentage = hasDiscount
     ? Math.round(((price - discountedPrice) / price) * 100)
     : 0;
-
   return (
     <Link to={`/product/${id}`}>
       <div key={id} className={styles.product}>
-        {discountedPrice && (
+        {hasDiscount && (
           <div className={styles.discountBanner}>
             Save {discountPercentage}%
           </div>

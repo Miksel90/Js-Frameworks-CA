@@ -36,6 +36,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: var(--spacing-6);
+  gap: var(--spacing-4);
 }
 
 @media (max-width: 768px) {

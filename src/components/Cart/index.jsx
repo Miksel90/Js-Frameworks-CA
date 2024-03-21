@@ -11,7 +11,7 @@ const CartIcon = () => {
   );
 
   return (
-    <Link to={`/cart`}>
+    <Link to={`/cart`} aria-label={`Shopping cart with ${itemCount} items`}>
       <div className={styles.cartIcon}>
         <FaCartShopping />
         {itemCount > 0 && <span className={styles.itemCount}>{itemCount}</span>}

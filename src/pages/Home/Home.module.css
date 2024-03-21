@@ -9,6 +9,7 @@
   background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   text-shadow: 5px 5px 5px #000000;
+  color: #fff;
 }
 
 .heroContent h1 {
@@ -17,7 +18,7 @@
 
 .productHeader {
   font-size: 3rem;
-  color: white;
+  color: var(--primary);
   text-align: center;
   margin-bottom: 0;
 }

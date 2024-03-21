@@ -7,8 +7,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #f1f1f1;
-  color: var(--secondary);
+  --background: var(--background-light);
+  --text-color: var(--text-light);
+  border: 1px solid var(--background);
 }
 
 .title {
@@ -20,8 +21,8 @@
 .productDetails {
   margin: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
-  color: black;
+  /* background-color: #f9f9f9;
+  color: black; */
 }
 
 .productImage {

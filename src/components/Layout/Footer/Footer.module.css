@@ -31,6 +31,13 @@ footer {
   max-width: 800px;
 }
 
+.themeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-6);
+}
+
 @media (max-width: 768px) {
   .footerText {
     text-align: center;

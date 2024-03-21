@@ -8,7 +8,11 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.contentWrap}>
         <Link to="/" className={styles.logoLink}>
-          <img src={logo} alt="Logo" className={styles.logo} />
+          <img
+            src={logo}
+            alt="The Logo to GadgetVault"
+            className={styles.logo}
+          />
           <span className={styles.logoText}>GadgetVault</span>
         </Link>
         <HeaderNavigation />

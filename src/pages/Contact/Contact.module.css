@@ -2,7 +2,8 @@
   height: 2px;
   width: 100%;
   background-color: #000;
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+  margin-top: var(--spacing-8);
 }
 
 .contactPage {
@@ -21,15 +22,8 @@
   align-items: center;
   padding: var(--spacing-8);
   gap: var(--spacing-4);
-  /* width: 100%; */
   margin: 0 auto;
 }
-
-/* .header {
-  display: flex;
-  margin: 10px;
-  justify-content: center;
-} */
 
 .contactHeader {
   display: flex;
@@ -49,8 +43,8 @@
 
 .contactForm input,
 .contactForm textarea {
-  border: none;
-  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: 2px;
   padding: 10px;
   width: calc(100% - 20px);
   font-size: 16px;

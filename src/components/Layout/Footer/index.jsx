@@ -1,6 +1,7 @@
 import styles from "./Footer.module.css";
 import logo from "../..//logo/gadgetVaultLogo.webp";
 import FooterNavigation from "/src/components/Navigation/Footer/index.jsx";
+import ThemeButton from "../../ThemeButton/index.jsx";
 
 const Footer = () => {
   return (
@@ -23,6 +24,9 @@ const Footer = () => {
         </div>
         <div>
           <FooterNavigation />
+        </div>
+        <div className={styles.themeContainer}>
+          <ThemeButton />
         </div>
       </div>
     </footer>

@@ -1,8 +1,24 @@
 :root {
+  font-family: changa, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
   font-size: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   --primary: hsl(219, 54%, 53%);
   --secondary: hsl(240, 26%, 55%);
-  --background: hsl(199, 27%, 39%);
+
+  --background: var(--background-light);
+  --text-color: var(--text-light);
+  --background-light: #ffffff;
+  --text-light: #000000;
+  --background-dark: #121212;
+  --text-dark: #ffffff;
+
   --success: hsl(160 95% 25%);
   --error: hsl(0, 100%, 40%);
   --spacing-1: 0.25rem;
@@ -14,6 +30,26 @@
   --spacing-7: 1.75rem;
   --spacing-8: 2rem;
   --col-min-width: 250px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body.light {
+  --background: var(--background-light);
+  --text-color: var(--text-light);
+}
+
+body.dark {
+  --background: var(--background-dark);
+  --text-color: var(--text-dark);
 }
 
 html {
@@ -39,11 +75,12 @@ li {
   list-style-type: none;
 }
 
-body {
-  min-height: 100vh;
-  background-color: var(--background);
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
   display: flex;
-  flex-direction: column;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
 .page {
@@ -65,12 +102,8 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-size: 1.3rem;
+a:hover {
+  color: #000;
 }
 
 button {

@@ -33,6 +33,9 @@ const SearchBar = () => {
 
   return (
     <form role="search" className={styles.searchForm} onSubmit={handleSubmit}>
+      <label htmlFor="search" className={styles.searchLabel}>
+        Search:
+      </label>
       <input
         id="search"
         type="search"
@@ -43,6 +46,7 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={handleSearch}
         autoComplete="off"
+        aria-label="Search"
       />
       <button type="submit" className={styles.searchButton}>
         Go

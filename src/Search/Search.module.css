@@ -15,10 +15,15 @@
 }
 
 .searchInput {
+  display: block;
   padding-left: 10px;
   font-style: italic;
   border: none;
   border-radius: 5px 0 0 5px;
+  transition: opacity 0.5s ease, width 0.5s ease;
+  width: 0;
+  opacity: 0;
+  padding: var(--spacing-2);
 }
 
 .searchInput:focus,
@@ -33,6 +38,7 @@
   align-items: center;
   padding: 0 10px;
   color: var(--background);
+  transition: transform 0.5s ease;
 }
 
 .searchSuggestion {
@@ -48,6 +54,11 @@
   z-index: 1;
 }
 
+.searchForm.isMenuOpen .searchInput {
+  width: 100%;
+  opacity: 1;
+}
+
 .suggestionItem {
   padding: 10px;
   border-bottom: 1px solid #eee;
@@ -61,16 +72,16 @@
 
 @media (max-width: 756px) {
   .searchForm {
-    max-width: 200px;
-    margin-top: 5px;
+    width: 50px;
+    transition: width 0.5s ease;
+    height: 40px;
   }
-  .searchSuggestion {
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-  }
-}
 
-.searchLabel {
-  display: none;
+  .searchButton {
+    background-color: var(--secondary);
+  }
+
+  .searchForm.isMenuOpen {
+    width: 100%;
+  }
 }

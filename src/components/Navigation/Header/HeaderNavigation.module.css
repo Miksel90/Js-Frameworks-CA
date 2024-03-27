@@ -23,9 +23,8 @@
 
 .searchBar {
   display: flex;
-  position: relative;
+  justify-content: center;
   align-items: center;
-  flex-grow: 1;
   border-radius: 10px 0 0 10px;
 }
 
@@ -46,13 +45,13 @@
 
 @media screen and (max-width: 780px) {
   .headerNav {
-    justify-content: space-around;
-    gap: var(--spacing-8);
+    justify-content: space-evenly;
+    gap: var(--spacing-2);
   }
 
   .hamburger {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
     background-color: var(--secondary);
   }
@@ -60,30 +59,25 @@
   .headerList {
     position: absolute;
     top: 100%;
-    left: -100px;
-    flex-direction: column-reverse;
+    right: -3.7rem;
+    flex-direction: column;
     width: 100%;
-    min-width: 280px;
+    min-width: 200px;
     padding: 1rem;
     display: none;
     background: var(--secondary);
+    gap: 0.5rem;
   }
 
   .headerList.menuOpen {
     display: flex;
+    border-radius: 5px;
   }
 
-  .headerItem,
-  .searchBar {
+  .headerItem {
     width: 100%;
-    text-align: center;
+    align-items: center;
     justify-content: center;
-    margin-right: 40px;
-  }
-}
-
-@media screen and (max-width: 429px) {
-  .headerList {
-    left: -200px;
+    display: flex;
   }
 }

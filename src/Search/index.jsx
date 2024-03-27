@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useFetchProducts } from "../hooks/useFetchProducts";
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 import styles from "./Search.module.css";
 
 const SearchBar = () => {
@@ -49,7 +50,7 @@ const SearchBar = () => {
         aria-label="Search"
       />
       <button type="submit" className={styles.searchButton}>
-        Go
+        <FaSearch />
       </button>
       <ul className={styles.searchSuggestion}>
         {filteredResults.map((product) => (

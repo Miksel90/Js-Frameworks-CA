@@ -8,7 +8,7 @@
 
 GadgetVault is created using React and the an E-Commerce API as my Course Assignment for the JavaScript Frameworks course at Noroff.
 
-main features of the application are:
+The main features of the application are:
 
 - Built with React
 - Zustand for state management
